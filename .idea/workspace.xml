@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c62ee3f-5599-4417-8dbc-f225f725abdc" name="Default" comment="" />
+    <list default="true" id="3c62ee3f-5599-4417-8dbc-f225f725abdc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/protobuf/test.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/services/BookService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/services/BookService.scala" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
     <ignored path="$PROJECT_DIR$/project/target/" />
@@ -31,8 +35,8 @@
       <file leaf-file-name="Server.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+            <state relative-caret-position="439">
+              <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
               <folding>
                 <element signature="e#35#72#0" expanded="true" />
               </folding>
@@ -43,8 +47,8 @@
       <file leaf-file-name="BookRepository.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="94" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="94" />
+            <state>
+              <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -63,7 +67,14 @@
       </file>
       <file leaf-file-name="BookService.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/services/BookService.scala">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="19" column="57" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="57" />
+              <folding>
+                <element signature="e#18#57#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="bookMessages.proto" pinned="false" current-in-tab="false">
@@ -88,6 +99,7 @@
         <option value="$PROJECT_DIR$/src/main/protobuf/bookMessages.proto" />
         <option value="$PROJECT_DIR$/src/main/protobuf/helloworld.proto" />
         <option value="$PROJECT_DIR$/build.sbt" />
+        <option value="$PROJECT_DIR$/src/main/scala/services/BookService.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala" />
       </list>
     </option>
@@ -135,13 +147,6 @@
               <item name="training-sbux-level-1-develop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="protobuf" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="scala-sbux-training-1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="training-sbux-level-1-develop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -150,7 +155,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -371,7 +376,13 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/services/BookService.scala">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#18#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/protobuf/bookMessages.proto">
       <provider selected="true" editor-type-id="text-editor">
@@ -428,9 +439,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/protobuf/bookMessages.proto" />
-    <entry file="file://$PROJECT_DIR$/src/main/scala/services/BookService.scala">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/BookTest.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -488,13 +496,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="94" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project/scalapb.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -519,10 +520,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" lean-forward="true" selection-start-column="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/services/BookService.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="57" />
+          <folding>
+            <element signature="e#18#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="23" column="8" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+        <state relative-caret-position="439">
+          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
           <folding>
             <element signature="e#35#72#0" expanded="true" />
           </folding>

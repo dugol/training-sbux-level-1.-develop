@@ -1,26 +1,27 @@
 package services
 
+import com.outworkers.phantom.ResultSet
 import entities.Book
 import repository.BookRepository
 
 import scala.concurrent.Future
 
 sealed trait BookServiceAlg{
-  def createBook(book:Book)
-  def deleteBook(book:Book)
-  def updateBook(book:Book)
+  def createBook(book:Book):Future[ResultSet]
+  def deleteBook(book:Book):Future[ResultSet]
+  def updateBook(book:Book):Future[ResultSet]
   def searchBook(isbn:String):Future[Option[Book]]
 }
 sealed trait BookService extends BookServiceAlg{
-  override def createBook(book: Book): Unit = {
+  override def createBook(book: Book): Future[ResultSet] = {
     BookRepository.saveBook(book)
   }
 
-  override def deleteBook(book: Book): Unit = {
+  override def deleteBook(book: Book): Future[ResultSet] = {
     BookRepository.deleteBook(book)
   }
 
-  override def updateBook(book: Book): Unit = {
+  override def updateBook(book: Book): Future[ResultSet] = {
     BookRepository.updateBook(book)
   }
 
