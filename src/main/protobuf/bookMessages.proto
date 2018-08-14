@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc";
+option java_outer_classname = "BookMessageProto";
+option objc_class_prefix = "BMG";
+
+package book;
+
+service Book{
+    rpc CreateBook(BookCreateRequest) returns(BookCreateResponse){}
+    rpc DeleteBook(BookDeleteRequest) returns(BookDeleteResponse){}
+    rpc SearchBook(BookSearchRequest) returns(BookSearchResponse){}
+    rpc UpdateBook(BookUpdateRequest) returns(BookUpdateResponse){}
+
+}
+
+message BookCreateRequest{
+    string isbn=1;
+    string tittle=2;
+    string author=3;
+    string gender=4;
+    string publisher=5;
+    string country=6;
+    int32 edition=7;
+}
+
+message BookCreateResponse{
+    string message=1;
+}
+
+message BookDeleteRequest{
+    string isbn=1;
+}
+
+message BookDeleteResponse{
+    string message=1;
+}
+
+message BookSearchRequest{
+    string isbn=1;
+}
+
+message BookSearchResponse{
+    string isbn=1;
+    string tittle=2;
+    string author=3;
+    string gender=4;
+    string publisher=5;
+    string country=6;
+    int32 edition=7;
+}
+
+message BookUpdateRequest{
+    string isbn=1;
+    string tittle=2;
+    string author=3;
+    string gender=4;
+    string publisher=5;
+    string country=6;
+    int32 edition=7;
+}
+
+message BookUpdateResponse{
+    string message=1;
+}
