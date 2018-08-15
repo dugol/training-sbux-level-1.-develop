@@ -14,7 +14,9 @@ class BookTest extends FunSuite{
 
   test("Consultar BD") {
     implicit val ecBook = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(20))
-    BookService.searchBook("123456").map(x=>x.map(x=>println(s"${x.tittle}")))
+    val res=BookService.searchBook("1234567")
+    val res2=Await.result(res,10 seconds)
+    println(res2)
   }
 
 }
