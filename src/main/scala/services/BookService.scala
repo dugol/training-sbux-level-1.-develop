@@ -19,22 +19,34 @@ sealed trait BookServiceAlg {
 }
 
 sealed trait BookService extends BookServiceAlg {
-  //private implicit val ecBook = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(20))
+  private implicit val ecBook = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(20))
+
   override def createBook(book: Book): Future[ResultSet] = {
-    /*BookRepository.searchBook(book.isbn).map(optionBook=>optionBook.fold(BookRepository.saveBook(book))(b=>{
-      println("Esto aquí no entra!!!")
-      Future(throw new Exception("No se puede guardar isbn existente"))})).flatten*/
-    BookRepository.saveBook(book)
+    BookRepository.searchBook(book.isbn)
+      .map(optionBook => optionBook.fold {
+        BookRepository.saveBook(book)
+      } { b => {
+        Future(throw new Exception("isbn existente"))
+      }
+      })
+      .flatten
+    //BookRepository.saveBook(book)
   }
 
   override def deleteBook(book: Book): Future[ResultSet] = {
-    //BookRepository.searchBook(book.isbn).map(ob=>ob.fold()(b=>BookRepository.deleteBook(b))).flatten
-    BookRepository.deleteBook(book)
+    BookRepository.searchBook(book.isbn)
+      .map(ob => ob.fold {
+        throw new Exception("libro inexistente")
+      } { b => BookRepository.deleteBook(b) })
+      .flatten
+    //BookRepository.deleteBook(book)
   }
 
   override def updateBook(book: Book): Future[ResultSet] = {
-    //BookRepository.searchBook(book.isbn).map(ob=>ob.fold(Future[ResultSet])(b=>BookRepository.updateBook(b))).flatten
-    BookRepository.updateBook(book)
+    BookRepository.searchBook(book.isbn)
+      .map(ob => ob.fold {
+        throw new Exception("libro inexistente")
+      } { b => BookRepository.updateBook(b) }).flatten
   }
 
   override def searchBook(isbn: String): Future[Option[Book]] = {

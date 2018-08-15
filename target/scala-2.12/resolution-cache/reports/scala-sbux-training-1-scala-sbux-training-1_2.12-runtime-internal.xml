@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, protobuf, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180815135649"/>
+		date="20180815141937"/>
 	<dependencies>
 		<module organisation="io.monix" name="monix-kafka-11_2.12">
 			<revision name="0.16" status="release" pubdate="20180206195827" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/monix/monix-kafka" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="116">

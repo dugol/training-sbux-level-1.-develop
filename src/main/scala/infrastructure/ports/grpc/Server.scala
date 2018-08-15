@@ -13,15 +13,16 @@ import io.grpc.protobuf.services.ProtoReflectionService
 import entities.Book
 import services.BookService
 
-class GrpcServer(executionContext: ExecutionContext) { self =>
+class GrpcServer(executionContext: ExecutionContext) {
+  self =>
 
   private[this] var server: Server = null
-
 
 
   private def start() = {
     server = ServerBuilder
       .forPort(50051)
+      .addService(ProtoReflectionService.newInstance())
       .addService(BookGrpc.bindService(new BookGrpcImpl, executionContext))
       .build.start
     println("Server started, listening on 50051")
@@ -51,24 +52,31 @@ class GrpcServer(executionContext: ExecutionContext) { self =>
   private class BookGrpcImpl extends BookGrpc.Book {
     override def createBook(request: BookCreateRequest): Future[BookCreateResponse] = {
       BookService.createBook(Book(request.isbn, request.tittle, request.author, request.gender, request.publisher, request.country, request.edition))
-      //  .map(x=>Future.successful(BookCreateResponse("Libro Creado"))).flatten.recoverWith{case e:Exception=>Future.successful(BookCreateResponse("Creación fallida"))}
-      Future.successful(BookCreateResponse("Libro creado"))
+        .map(x => Future.successful(BookCreateResponse("Libro Creado")))
+        .flatten
+        .recoverWith { case e: Exception => Future.successful(BookCreateResponse("Creacion fallida, ISBN existente")) }
     }
 
     override def deleteBook(request: BookDeleteRequest): Future[BookDeleteResponse] = {
       BookService.deleteBook(Book(request.isbn, "", "", "", "", "", 0))
-      Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} borrado exitosamente"))
+        .map(x => Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} borrado exitosamente")))
+        .flatten
+        .recoverWith { case e: Exception => Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} inexistente")) }
+
     }
 
     override def searchBook(request: BookSearchRequest): Future[BookSearchResponse] = {
       BookService.searchBook(request.isbn)
-        .map(optionBook => optionBook.fold(BookSearchResponse("inexistente", "", "", "", "", "", 0))
-        (book => BookSearchResponse(book.isbn, book.tittle, book.author, book.gender, book.publisher, book.country, book.edition)))
+        .map(optionBook => optionBook.fold {
+          BookSearchResponse("inexistente", "", "", "", "", "", 0)
+        } { book => BookSearchResponse(book.isbn, book.tittle, book.author, book.gender, book.publisher, book.country, book.edition) })
     }
 
     override def updateBook(request: BookUpdateRequest): Future[BookUpdateResponse] = {
       BookService.updateBook(Book(request.isbn, request.tittle, request.author, request.gender, request.publisher, request.country, request.edition))
-      Future.successful(BookUpdateResponse("Libro actualizado"))
+        .map(x => Future.successful(BookUpdateResponse("Libro actualizado")))
+        .flatten
+        .recoverWith { case e: Exception => Future.successful(BookUpdateResponse(s"sLibro con isbn${request.isbn} inexistente")) }
     }
   }
 
