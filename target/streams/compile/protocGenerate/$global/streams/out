@@ -1,6 +1,5 @@
-[0m[[0m[0minfo[0m] [0m[0mCompiling 2 protobuf files to /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/src_managed/main[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 protobuf files to /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/src_managed/main[0m
 [0m[[0m[0mdebug[0m] [0m[0mprotoc options:[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling schema /home/s4n/Downloads/training-sbux-level-1-develop/src/main/protobuf/bookMessages.proto[0m
-[0m[[0m[0minfo[0m] [0m[0mCompiling schema /home/s4n/Downloads/training-sbux-level-1-develop/src/main/protobuf/test.proto[0m
 [0m[[0m[0minfo[0m] [0m[0mCompiling protobuf[0m
 [0m[[0m[0minfo[0m] [0m[0mProtoc target directory: /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/src_managed/main[0m

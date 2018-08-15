@@ -8,10 +8,10 @@ option objc_class_prefix = "BMG";
 package book;
 
 service Book{
-    rpc CreateBook(BookCreateRequest) returns(BookCreateResponse){}
-    rpc DeleteBook(BookDeleteRequest) returns(BookDeleteResponse){}
-    rpc SearchBook(BookSearchRequest) returns(BookSearchResponse){}
-    rpc UpdateBook(BookUpdateRequest) returns(BookUpdateResponse){}
+    rpc createBook(BookCreateRequest) returns(BookCreateResponse){}
+    rpc deleteBook(BookDeleteRequest) returns(BookDeleteResponse){}
+    rpc searchBook(BookSearchRequest) returns(BookSearchResponse){}
+    rpc updateBook(BookUpdateRequest) returns(BookUpdateResponse){}
 
 }
 

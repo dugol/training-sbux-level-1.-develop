@@ -7,20 +7,21 @@ import io.grpc.bookMessages._
 import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.{Server, ServerBuilder}
 import java.util.logging.Logger
+import io.grpc.protobuf.services.ProtoReflectionService
 
 
 import entities.Book
 import services.BookService
 
 class GrpcServer(executionContext: ExecutionContext){ self =>
-  implicit val ecBook = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(20))
+
   private[this] var server:Server=null
 
-  private def start()={
+  implicit val ecBook = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(20))
+  private def start():Unit={
     server=ServerBuilder
       .forPort(50051)
       .addService(BookGrpc.bindService(new BookGrpcImpl,executionContext))
-      //.addService(ProtoReflectionService.newInstance())
       .build.start
     println("Server started, listening on 50051")
     sys.addShutdownHook{
@@ -44,9 +45,10 @@ class GrpcServer(executionContext: ExecutionContext){ self =>
   }
 
 
-  private class BookGrpcImpl extends BookGrpc.Book{
+  private class BookGrpcImpl extends BookGrpc.Book {
     override def createBook(request: BookCreateRequest): Future[BookCreateResponse] = {
       BookService.createBook(Book(request.isbn,request.tittle,request.author,request.gender,request.publisher,request.country,request.edition))
+      //  .map(x=>Future.successful(BookCreateResponse("Libro Creado"))).flatten.recoverWith{case e:Exception=>Future.successful(BookCreateResponse("Creación fallida"))}
       Future.successful(BookCreateResponse("Libro creado"))
     }
 
