@@ -4,7 +4,7 @@ object BookGrpc {
   val METHOD_CREATE_BOOK: _root_.io.grpc.MethodDescriptor[io.grpc.bookMessages.BookCreateRequest, io.grpc.bookMessages.BookCreateResponse] =
     _root_.io.grpc.MethodDescriptor.newBuilder()
       .setType(_root_.io.grpc.MethodDescriptor.MethodType.UNARY)
-      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "createBook"))
+      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "CreateBook"))
       .setRequestMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookCreateRequest))
       .setResponseMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookCreateResponse))
       .build()
@@ -12,7 +12,7 @@ object BookGrpc {
   val METHOD_DELETE_BOOK: _root_.io.grpc.MethodDescriptor[io.grpc.bookMessages.BookDeleteRequest, io.grpc.bookMessages.BookDeleteResponse] =
     _root_.io.grpc.MethodDescriptor.newBuilder()
       .setType(_root_.io.grpc.MethodDescriptor.MethodType.UNARY)
-      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "deleteBook"))
+      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "DeleteBook"))
       .setRequestMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookDeleteRequest))
       .setResponseMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookDeleteResponse))
       .build()
@@ -20,7 +20,7 @@ object BookGrpc {
   val METHOD_SEARCH_BOOK: _root_.io.grpc.MethodDescriptor[io.grpc.bookMessages.BookSearchRequest, io.grpc.bookMessages.BookSearchResponse] =
     _root_.io.grpc.MethodDescriptor.newBuilder()
       .setType(_root_.io.grpc.MethodDescriptor.MethodType.UNARY)
-      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "searchBook"))
+      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "SearchBook"))
       .setRequestMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookSearchRequest))
       .setResponseMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookSearchResponse))
       .build()
@@ -28,7 +28,7 @@ object BookGrpc {
   val METHOD_UPDATE_BOOK: _root_.io.grpc.MethodDescriptor[io.grpc.bookMessages.BookUpdateRequest, io.grpc.bookMessages.BookUpdateResponse] =
     _root_.io.grpc.MethodDescriptor.newBuilder()
       .setType(_root_.io.grpc.MethodDescriptor.MethodType.UNARY)
-      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "updateBook"))
+      .setFullMethodName(_root_.io.grpc.MethodDescriptor.generateFullMethodName("book.Book", "UpdateBook"))
       .setRequestMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookUpdateRequest))
       .setResponseMarshaller(new com.trueaccord.scalapb.grpc.Marshaller(io.grpc.bookMessages.BookUpdateResponse))
       .build()

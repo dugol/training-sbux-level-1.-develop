@@ -8,13 +8,17 @@ import repository.BookRepository
 
 import scala.concurrent.{ExecutionContext, Future}
 
-sealed trait BookServiceAlg{
-  def createBook(book:Book):Future[ResultSet]
-  def deleteBook(book:Book):Future[ResultSet]
-  def updateBook(book:Book):Future[ResultSet]
-  def searchBook(isbn:String):Future[Option[Book]]
+sealed trait BookServiceAlg {
+  def createBook(book: Book): Future[ResultSet]
+
+  def deleteBook(book: Book): Future[ResultSet]
+
+  def updateBook(book: Book): Future[ResultSet]
+
+  def searchBook(isbn: String): Future[Option[Book]]
 }
-sealed trait BookService extends BookServiceAlg{
+
+sealed trait BookService extends BookServiceAlg {
   //private implicit val ecBook = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(20))
   override def createBook(book: Book): Future[ResultSet] = {
     /*BookRepository.searchBook(book.isbn).map(optionBook=>optionBook.fold(BookRepository.saveBook(book))(b=>{
@@ -23,7 +27,7 @@ sealed trait BookService extends BookServiceAlg{
     BookRepository.saveBook(book)
   }
 
-  override def deleteBook(book: Book):Future[ResultSet] = {
+  override def deleteBook(book: Book): Future[ResultSet] = {
     //BookRepository.searchBook(book.isbn).map(ob=>ob.fold()(b=>BookRepository.deleteBook(b))).flatten
     BookRepository.deleteBook(book)
   }

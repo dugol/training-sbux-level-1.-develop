@@ -7,7 +7,7 @@
 		revision="1.0"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, protobuf, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180814112608"/>
+		date="20180815135649"/>
 	<dependencies>
 		<module organisation="io.monix" name="monix-kafka-11_2.12">
 			<revision name="0.16" status="release" pubdate="20180206195827" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/monix/monix-kafka" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="116">
@@ -1198,12 +1198,12 @@
 			</revision>
 		</module>
 		<module organisation="io.grpc" name="grpc-services">
-			<revision name="1.8.0" status="release" pubdate="20171120192912" resolver="public" artresolver="public" homepage="https://github.com/grpc/grpc-java" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="37">
+			<revision name="1.8.0" status="release" pubdate="20171120192912" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/grpc/grpc-java" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="37">
 				<license name="Apache 2.0" url="https://opensource.org/licenses/Apache-2.0"/>
-				<metadata-artifact status="successful" details="" size="2261" time="577" location="/home/s4n/.ivy2/cache/io.grpc/grpc-services/ivy-1.8.0.xml" searched="true" original-local-location="/home/s4n/.ivy2/cache/io.grpc/grpc-services/ivy-1.8.0.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/grpc/grpc-services/1.8.0/grpc-services-1.8.0.pom"/>
+				<metadata-artifact status="no" details="" size="3228" time="0" location="/home/s4n/.ivy2/cache/io.grpc/grpc-services/ivy-1.8.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/grpc/grpc-services/1.8.0/grpc-services-1.8.0.pom"/>
 				<caller organisation="scala-sbux-training-1" name="scala-sbux-training-1_2.12" conf="test, compile, provided, test-internal, runtime, optional" rev="1.8.0" rev-constraint-default="1.8.0" rev-constraint-dynamic="1.8.0" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="grpc-services" type="jar" ext="jar" status="successful" details="" size="466986" time="4729" location="/home/s4n/.ivy2/cache/io.grpc/grpc-services/jars/grpc-services-1.8.0.jar">
+					<artifact name="grpc-services" type="jar" ext="jar" status="no" details="" size="466986" time="0" location="/home/s4n/.ivy2/cache/io.grpc/grpc-services/jars/grpc-services-1.8.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/grpc/grpc-services/1.8.0/grpc-services-1.8.0.jar"/>
 					</artifact>
 				</artifacts>

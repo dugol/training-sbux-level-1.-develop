@@ -1,6 +1,6 @@
-[0m[[0m[31merror[0m] [0m[0m/home/s4n/Downloads/training-sbux-level-1-develop/src/main/scala/infrastructure/ports/grpc/Server.scala:60:14: Cannot find an implicit ExecutionContext. You might pass[0m
+[0m[[0m[31merror[0m] [0m[0m/home/s4n/Downloads/training-sbux-level-1-develop/src/main/scala/infrastructure/ports/grpc/Server.scala:63:13: Cannot find an implicit ExecutionContext. You might pass[0m
 [0m[[0m[31merror[0m] [0m[0man (implicit ec: ExecutionContext) parameter to your method[0m
 [0m[[0m[31merror[0m] [0m[0mor import scala.concurrent.ExecutionContext.Implicits.global.[0m
-[0m[[0m[31merror[0m] [0m[0m      res.map(optionBook=>optionBook.fold(BookSearchResponse("inexistente","","","","","",0))[0m
-[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m        .map(optionBook => optionBook.fold(BookSearchResponse("inexistente", "", "", "", "", "", 0))[0m
+[0m[[0m[31merror[0m] [0m[0m            ^[0m
 [0m[[0m[31merror[0m] [0m[0mone error found[0m
