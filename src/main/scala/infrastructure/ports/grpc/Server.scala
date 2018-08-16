@@ -7,11 +7,11 @@ import io.grpc.bookMessages._
 import scala.concurrent.{ExecutionContext, Future}
 import io.grpc.{Server, ServerBuilder}
 import java.util.logging.Logger
+
 import io.grpc.protobuf.services.ProtoReflectionService
-
-
 import entities.Book
-import services.{BookService,KafkaService}
+import repository.RealBookRepository
+import services.{BookService, KafkaService}
 
 class GrpcServer(executionContext: ExecutionContext) {
   self =>
@@ -52,6 +52,7 @@ class GrpcServer(executionContext: ExecutionContext) {
   private class BookGrpcImpl extends BookGrpc.Book {
     override def createBook(request: BookCreateRequest): Future[BookCreateResponse] = {
       BookService.createBook(Book(request.isbn, request.tittle, request.author, request.gender, request.publisher, request.country, request.edition))
+        .run(RealBookRepository)
         .map(x => {
           KafkaService.send(s"Libro con isbn:${request.isbn} creado.")
           Future.successful(BookCreateResponse("Libro Creado"))})
@@ -63,6 +64,7 @@ class GrpcServer(executionContext: ExecutionContext) {
 
     override def deleteBook(request: BookDeleteRequest): Future[BookDeleteResponse] = {
       BookService.deleteBook(Book(request.isbn, "", "", "", "", "", 0))
+        .run(RealBookRepository)
         .map(x => {
           KafkaService.send(s"Se eliminó el libro con ISBN: ${request.isbn}")
           Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} borrado exitosamente"))})
@@ -75,6 +77,7 @@ class GrpcServer(executionContext: ExecutionContext) {
 
     override def searchBook(request: BookSearchRequest): Future[BookSearchResponse] = {
       BookService.searchBook(request.isbn)
+        .run(RealBookRepository)
         .map(optionBook => optionBook.fold {
           KafkaService.send(s"Se intentó buscar un libro con ISBN: ${request.isbn} inexistente")
           BookSearchResponse("inexistente", "", "", "", "", "", 0)
@@ -85,6 +88,7 @@ class GrpcServer(executionContext: ExecutionContext) {
 
     override def updateBook(request: BookUpdateRequest): Future[BookUpdateResponse] = {
       BookService.updateBook(Book(request.isbn, request.tittle, request.author, request.gender, request.publisher, request.country, request.edition))
+        .run(RealBookRepository)
         .map(x => {
           KafkaService.send(s"Se actualizó el libro con ISBN ${request.isbn}")
           Future.successful(BookUpdateResponse("Libro actualizado"))})
