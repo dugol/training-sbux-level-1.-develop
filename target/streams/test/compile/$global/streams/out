@@ -1,5 +1,2 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/s4n/Downloads/training-sbux-level-1-develop/src/test/scala/BookTest.scala:27:11: com.outworkers.phantom.ResultSet and scala.concurrent.Future[com.outworkers.phantom.ResultSet] are unrelated: they will most likely never compare equal[0m
-[0m[[0m[33mwarn[0m] [0m[0m    assert(res2==Future(ResultSet(ResultSet(null,null),null)))[0m
-[0m[[0m[33mwarn[0m] [0m[0m          ^[0m
 [0m[[0m[33mwarn[0m] [0m[0mthere were two feature warnings; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

@@ -56,6 +56,10 @@ object TestBookRepository extends BookRepository{
   }
 
   override def searchBook(isbn: String): Future[Option[Book]] = {
-    Future(Option(Book("test","test","test","test","test","test",0)))
+    isbn match{
+      case "1234567" => Future(Option(Book("test","test","test","test","test","test",0)))
+      case _  => Future(None)
+    }
+
   }
 }

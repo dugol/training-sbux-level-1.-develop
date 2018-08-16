@@ -5,7 +5,7 @@ import java.util.concurrent.Executors
 import cats.data.Reader
 import com.outworkers.phantom.ResultSet
 import entities.Book
-import repository.{RealBookRepository, BookRepository}
+import repository.BookRepository
 
 import scala.concurrent.{ExecutionContext, Future}
 
@@ -26,7 +26,7 @@ sealed trait BookService extends BookServiceAlg {
     repository: BookRepository =>
       repository.searchBook(book.isbn)
         .map(optionBook => optionBook.fold {
-          RealBookRepository.saveBook(book)
+          repository.saveBook(book)
         } { b => {
           Future(throw new Exception("isbn existente"))
         }
@@ -39,7 +39,7 @@ sealed trait BookService extends BookServiceAlg {
       repository.searchBook(book.isbn)
         .map(ob => ob.fold {
           throw new Exception("libro inexistente")
-        } { b => RealBookRepository.deleteBook(b) })
+        } { b => repository.deleteBook(b) })
         .flatten
   }
 
@@ -48,7 +48,7 @@ sealed trait BookService extends BookServiceAlg {
       repository.searchBook(book.isbn)
         .map(ob => ob.fold {
           throw new Exception("libro inexistente")
-        } { b => RealBookRepository.updateBook(b) }).flatten
+        } { b => repository.updateBook(b) }).flatten
   }
 
   override def searchBook(isbn: String): Reader[BookRepository, Future[Option[Book]]] = Reader {

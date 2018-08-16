@@ -4,6 +4,7 @@ import com.outworkers.phantom.ResultSet
 import com.outworkers.phantom.connectors.KeySpace
 import entities.Book
 import org.apache.cassandra.db.Columns
+import org.scalacheck.Prop.Exception
 import org.scalatest.FunSuite
 import repository.{BookRepository, TestBookRepository}
 import services.BookService
@@ -20,14 +21,15 @@ class BookTest extends FunSuite {
     val res2 = Await.result(res, 10 seconds).get
     assert(res2 == Book("test", "test", "test", "test", "test", "test", 0))
   }
-}
-  /*
-  test("Crear book"){
+
+
+  test("Crear book") {
     implicit val ecBook = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(20))
-    val res=BookService.createBook(Book("","","","","","",0)).run(TestBookRepository)
-    val res2=Await.result(res,10 seconds)
-    assert(res2==Future(ResultSet(ResultSet(null,null),null)))
+    val res = BookService.createBook(Book("", "", "", "", "", "", 0)).run(TestBookRepository)
+    val res2 = Await.result(res, 10 seconds)
+    assert(res2==ResultSet(ResultSet(null,null),null))
   }
+
 
   /*
   test("Service CreateBook"){
