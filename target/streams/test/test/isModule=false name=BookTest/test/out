@@ -1,4 +1,9 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mBookTest:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- Consultar BD[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- Service CreateBook *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  ResultSet(ResultSet[ exhausted: true, Columns[]],V4) did not equal 1 (BookTest.scala:27)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Consultar libro existente con isbn 1234567[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Consultar libro con isbn inexistente[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Crear libro con ISBN inexistente[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Crear libro con ISBN existente[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Borrar libro con ISBN 1234567[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Borrar libro con ISBN inexistente[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Actualizar libro con ISBN 1234567[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- Actualizar libro con ISBN no existente[0m[0m

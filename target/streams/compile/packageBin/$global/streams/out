@@ -44,6 +44,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/services/KafkaService$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookUpdateResponse$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookUpdateResponse$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	repository/RealBookRepository$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/RealBookRepository$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookGrpc$BookBlockingStub$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookGrpc$BookBlockingStub$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookCreateRequest$BookCreateRequestLens.class[0m
@@ -66,6 +68,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/infrastructure/ports/grpc/GrpcServer.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	services[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/services[0m
+[0m[[0m[0mdebug[0m] [0m[0m	repository/RealBookRepository.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/RealBookRepository.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookDeleteResponse$BookDeleteResponseLens.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookDeleteResponse$BookDeleteResponseLens.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	infrastructure/ports[0m
@@ -86,6 +90,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookUpdateResponse$BookUpdateResponseLens.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	repository/BookRepository.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/BookRepository.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	repository/TestBookRepository$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/TestBookRepository$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	repository/BookDTO.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/BookDTO.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	repository/BookDTO$publisher$.class[0m
@@ -94,8 +100,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/BookDTO$isbn$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookSearchResponse.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookSearchResponse.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	repository/BookRepository$.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/BookRepository$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	repository/LocalDatabase.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/LocalDatabase.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	repository/LocalDatabase$.class[0m
@@ -120,6 +124,8 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/infrastructure/ports/grpc/GrpcServer$.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookDeleteResponse.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookDeleteResponse.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	repository/TestBookRepository.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/TestBookRepository.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	infrastructure/ports/grpc[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/infrastructure/ports/grpc[0m
 [0m[[0m[0mdebug[0m] [0m[0m	entities/Book$.class[0m
@@ -138,8 +144,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/infrastructure/ports/grpc/GrpcServer$BookGrpcImpl.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookUpdateResponse.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookUpdateResponse.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	repository/BookRepositoryAlg.class[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/repository/BookRepositoryAlg.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	io/grpc/bookMessages/BookGrpc$BookStub.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	  /home/s4n/Downloads/training-sbux-level-1-develop/target/scala-2.12/classes/io/grpc/bookMessages/BookGrpc$BookStub.class[0m
 [0m[[0m[0mdebug[0m] [0m[0m	infrastructure/ports/grpc/GrpcServer$BookGrpcImpl$$anonfun$deleteBook$2.class[0m

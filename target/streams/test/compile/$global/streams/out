@@ -1,8 +1,2 @@
-[0m[[0m[33mwarn[0m] [0m[0m/home/s4n/Downloads/training-sbux-level-1-develop/src/test/scala/BookTest.scala:27:11: comparing values of types com.outworkers.phantom.ResultSet and Int using `==' will always yield false[0m
-[0m[[0m[33mwarn[0m] [0m[0m    assert(res==1)[0m
-[0m[[0m[33mwarn[0m] [0m[0m          ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/home/s4n/Downloads/training-sbux-level-1-develop/src/test/scala/BookTest.scala:29:11: comparing values of types com.outworkers.phantom.ResultSet and Int using `==' will always yield false[0m
-[0m[[0m[33mwarn[0m] [0m[0m    assert(res==1)[0m
-[0m[[0m[33mwarn[0m] [0m[0m          ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mthere were two feature warnings; re-run with -feature for details[0m
-[0m[[0m[33mwarn[0m] [0m[0mthree warnings found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were 8 feature warnings; re-run with -feature for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

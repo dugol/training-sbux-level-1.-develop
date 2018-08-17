@@ -8,7 +8,9 @@ private object Connector {
 }
 
 class LocalDatabase(val keyspace: CassandraConnection) extends Database[LocalDatabase](keyspace) {
+
   object books extends BookDTO with Connector
+
 }
 
 object LocalDatabase extends LocalDatabase(Connector.connector)
