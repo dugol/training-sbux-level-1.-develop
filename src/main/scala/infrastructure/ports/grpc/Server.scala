@@ -55,11 +55,14 @@ class GrpcServer(executionContext: ExecutionContext) {
         .run(RealBookRepository)
         .map(x => {
           KafkaService.send(s"Libro con isbn:${request.isbn} creado.")
-          Future.successful(BookCreateResponse("Libro Creado"))})
+          Future.successful(BookCreateResponse("Libro Creado"))
+        })
         .flatten
         .recoverWith { case e: Exception => {
           KafkaService.send(s"Se intentó crear un libro con una ISBN existente${request.isbn}")
-          Future.successful(BookCreateResponse("Creacion fallida, ISBN existente"))} }
+          Future.successful(BookCreateResponse("Creacion fallida, ISBN existente"))
+        }
+        }
     }
 
     override def deleteBook(request: BookDeleteRequest): Future[BookDeleteResponse] = {
@@ -67,11 +70,14 @@ class GrpcServer(executionContext: ExecutionContext) {
         .run(RealBookRepository)
         .map(x => {
           KafkaService.send(s"Se eliminó el libro con ISBN: ${request.isbn}")
-          Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} borrado exitosamente"))})
+          Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} borrado exitosamente"))
+        })
         .flatten
         .recoverWith { case e: Exception => {
           KafkaService.send(s"Se intentó eliminar un libro con iSBN: ${request.isbn} inexistente")
-          Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} inexistente")) }}
+          Future.successful(BookDeleteResponse(s"Libro con isbn ${request.isbn} inexistente"))
+        }
+        }
 
     }
 
@@ -83,7 +89,8 @@ class GrpcServer(executionContext: ExecutionContext) {
           BookSearchResponse("inexistente", "", "", "", "", "", 0)
         } {
           KafkaService.send(s"Se consultó el libro con ISBN ${request.isbn}")
-          book => BookSearchResponse(book.isbn, book.tittle, book.author, book.gender, book.publisher, book.country, book.edition) })
+          book => BookSearchResponse(book.isbn, book.tittle, book.author, book.gender, book.publisher, book.country, book.edition)
+        })
     }
 
     override def updateBook(request: BookUpdateRequest): Future[BookUpdateResponse] = {
@@ -91,11 +98,14 @@ class GrpcServer(executionContext: ExecutionContext) {
         .run(RealBookRepository)
         .map(x => {
           KafkaService.send(s"Se actualizó el libro con ISBN ${request.isbn}")
-          Future.successful(BookUpdateResponse("Libro actualizado"))})
+          Future.successful(BookUpdateResponse("Libro actualizado"))
+        })
         .flatten
         .recoverWith { case e: Exception => {
           KafkaService.send(s"Se intentó actualizar un libro con ISBN ${request.isbn} inexistente")
-          Future.successful(BookUpdateResponse(s"sLibro con isbn${request.isbn} inexistente")) }}
+          Future.successful(BookUpdateResponse(s"sLibro con isbn${request.isbn} inexistente"))
+        }
+        }
     }
   }
 

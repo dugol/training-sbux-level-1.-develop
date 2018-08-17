@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb6abed2-8d86-40fb-9dbd-322d68d21ce8" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/scala/entities/Book.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/entities/Book.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/repository/BookDTO.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/repository/BookDTO.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/services/BookService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/services/BookService.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/repository/Connector.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/repository/Connector.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/services/KafkaService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/services/KafkaService.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/scala/BookTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/BookTest.scala" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,41 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="build.sbt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.sbt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Server.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-              <folding>
-                <element signature="e#35#72#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BookDTO.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookDTO.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
-              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BookTest.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/BookTest.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            <state relative-caret-position="268">
+              <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -65,20 +39,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BookRepository.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BookService.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/services/BookService.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-513">
-              <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+            <state relative-caret-position="150">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="48" />
+              <folding>
+                <element signature="e#18#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,11 +58,13 @@
       <find>BookRepositoryAlg</find>
       <find>BookRepository</find>
       <find>RealBookRepository</find>
+      <find>Fr</find>
     </findStrings>
     <replaceStrings>
       <replace>BookRepository</replace>
       <replace>RealBookRepository</replace>
       <replace>repository</replace>
+      <replace>futureResultSet</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -104,10 +74,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/project/scalapb.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/services/KafkaService.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/services/BookService.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/entities/Book.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/repository/BookDTO.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/repository/Connector.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/services/KafkaService.scala" />
         <option value="$PROJECT_DIR$/src/test/scala/BookTest.scala" />
       </list>
     </option>
@@ -155,15 +128,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="scala-sbux-training-1" type="b2602c69:ProjectViewProjectNode" />
               <item name="training-sbux-level-1-develop" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="scala-sbux-training-1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="training-sbux-level-1-develop" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="scala" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,6 +364,23 @@
         <state relative-caret-position="-180" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/entities/Book.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#35#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.sbt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -393,51 +388,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookDTO.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/repository/Connector.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/services/KafkaService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        <state relative-caret-position="252">
+          <caret line="25" column="1" selection-end-line="26" />
           <folding>
             <element signature="e#19#71#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookDTO.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/infrastructure/ports/grpc/Server.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="79" column="8" selection-start-line="79" selection-start-column="8" selection-end-line="79" selection-end-column="8" />
-          <folding>
-            <element signature="e#35#72#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/repository/BookRepository.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="60" column="28" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        <state relative-caret-position="-75">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/services/BookService.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-513">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+        <state relative-caret-position="150">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="48" />
+          <folding>
+            <element signature="e#18#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/scala/BookTest.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state relative-caret-position="268">
+          <caret line="69" column="59" selection-start-line="69" selection-start-column="59" selection-end-line="69" selection-end-column="59" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
